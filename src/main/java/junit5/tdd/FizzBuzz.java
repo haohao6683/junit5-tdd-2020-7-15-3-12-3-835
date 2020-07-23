@@ -1,7 +1,15 @@
 package junit5.tdd;
 
 public class FizzBuzz {
-    public String play(int number){
+    public String play(int stuNumber){
+        String result = "";
+        for(int i = 1; i <= stuNumber; i++){
+            result += judge(i) + "\n";
+        }
+        return result;
+    }
+
+    public String judge(int number){
         if(number % 3 == 0 && number % 7 == 0 && number % 5 == 0){
             return "FizzBuzzWhizz";
         }
