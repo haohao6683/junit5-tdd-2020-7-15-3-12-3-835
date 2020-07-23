@@ -21,7 +21,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void should_return_3_when_play_fizzBuzz_given_3() {
+    void should_return_Fizz_when_play_fizzBuzz_given_3() {
         //given
         int number = 3;
 
@@ -34,7 +34,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void should_return_5_when_play_fizzBuzz_given_5() {
+    void should_return_Buzz_when_play_fizzBuzz_given_5() {
         //given
         int number = 5;
 
@@ -47,7 +47,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void should_return_7_when_play_fizzBuzz_given_7() {
+    void should_return_Whizz_when_play_fizzBuzz_given_7() {
         //given
         int number = 7;
 
@@ -57,5 +57,57 @@ public class FizzBuzzTest {
 
         //then
         assertEquals("Whizz", actual);
+    }
+
+    @Test
+    void should_return_FizzBuzz_when_play_fizzBuzz_given_15() {
+        //given
+        int number = 15;
+
+        //when
+        FizzBuzz fizz = new FizzBuzz();
+        String actual = fizz.play(number);
+
+        //then
+        assertEquals("FizzBuzz", actual);
+    }
+
+    @Test
+    void should_return_FizzWhizz_when_play_fizzBuzz_given_21() {
+        //given
+        int number = 21;
+
+        //when
+        FizzBuzz fizz = new FizzBuzz();
+        String actual = fizz.play(number);
+
+        //then
+        assertEquals("FizzWhizz", actual);
+    }
+
+    @Test
+    void should_return_BuzzWhizz_when_play_fizzBuzz_given_35() {
+        //given
+        int number = 35;
+
+        //when
+        FizzBuzz fizz = new FizzBuzz();
+        String actual = fizz.play(number);
+
+        //then
+        assertEquals("BuzzWhizz", actual);
+    }
+
+    @Test
+    void should_return_FizzBuzzWhizz_when_play_fizzBuzz_given_105() {
+        //given
+        int number = 105;
+
+        //when
+        FizzBuzz fizz = new FizzBuzz();
+        String actual = fizz.play(number);
+
+        //then
+        assertEquals("FizzBuzzWhizz", actual);
     }
 }
